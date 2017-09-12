@@ -42,6 +42,6 @@ var makeGrid = function(height, width) {
 
 function changeColor(id){
 	$("#" + id).css({backgroundColor: color});
-};
+}
 
 
