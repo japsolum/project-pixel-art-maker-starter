@@ -3,7 +3,8 @@
 
 // When size is submitted by the user, call makeGrid()
 
-var width,
+var color = $("#colorPicker").val(),
+	width,
 	height;
 
 $(document).ready(function() {
@@ -18,18 +19,29 @@ $(document).ready(function() {
 	});
 });
 
+$("#colorPicker").on("change", function() {
+	color = $("#colorPicker").val();
+	$("#colorPicker").val(color);
+	console.log(color);
+});
+
 $("#submit").click(function() {
 	height = $("#input_height").attr("value");
 	width = $("#input_width").attr("value");
 	makeGrid(height, width);
 });
 
-var makeGrid = function(height, width) {	
-	for (var y = 0; y < height.length; y++) {
-		//create row
-		for (var x = 0; x < width.length; x++) {
-			//create all columns in row
+var makeGrid = function(height, width) {
+	for (var y = 1; y <= height; y++) {
+		$("#pixel_canvas").append('<tr id="row' + y +'"></tr>');
+		for (var x = 1; x <= width; x++) {
+			$("#row" + y).append("<td class='cell' id='cell" + y + "-" + x + "' onclick='changeColor(this.id);'></td>");
 		}
 	}
-	console.log("height " + height + " width " + width);
 };
+
+function changeColor(id){
+	$("#" + id).css({backgroundColor: color});
+};
+
+
