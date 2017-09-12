@@ -1,16 +1,7 @@
-# Pixel Art Maker Project
-
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
-## Instructions
-
-To get started, open `designs.js` and start building out the app's functionality.
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+# Pixel Art Maker!
+### To Run
+Fork or clone repo, or download zip file. Run index.html.
+### To Use
+- Start by selecting your desired height and width of grid then click on `submit`
+- Once grid is built you can choose a color from the `pick a color` button.
+- From there it's as easy as clicking on which pixel you would like to fill in.
